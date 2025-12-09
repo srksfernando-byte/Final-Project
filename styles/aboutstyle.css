@@ -1,0 +1,269 @@
+/* General Reset */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFA3A8;
+}
+
+/* Header */
+header {
+  background-color: #FF6B81;
+  text-align: center;
+  padding: 10px;
+  color: #1A1F36;
+}
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+header p {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Navigation (unchanged) */
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  background-color: #2ecc71;
+  padding: 0 20px;
+}
+.logo {
+  position: right;
+  left: 10px;
+  display: flex;
+  top: 10px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #2ecc71;
+  display: flex;
+  justify-content: flex-end;
+}
+ul li {
+  float: left;
+}
+ul li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul li a:hover {
+  color: #ff3b58;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger img {
+  background-color: transparent;
+  width: 30px;
+  transition: transform 0.5s ease;
+}
+.hamburger:hover img {
+  transform: rotate(180deg);
+}
+.hamburger img.spin {
+  transform: rotate(720deg); /* spin once */
+}
+
+/* About hero */
+.about_hero {
+  background-color: #FF6B81;
+  color: #1A1F36;
+  text-align: center;
+  padding: 30px 20px;
+}
+.about_hero h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.about_hero p {
+  font-size: 16px;
+}
+
+/* About content */
+.about {
+  background-color: #FFA3A8;
+  color: #1A1F36;
+  padding: 40px 20px;
+  text-align: center;
+}
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.about_grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.about_card {
+  background-color: #FF6B81;
+  border-radius: 10px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.about_card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.about_card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Highlight strip */
+.about_highlight {
+  background-color: #FF6B81;
+  color: #1A1F36;
+  text-align: center;
+  padding: 30px 20px;
+}
+.about_highlight h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.about_highlight p {
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #2ecc71;
+  color: #1A1F36;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 16px;
+}
+
+/* Mobile Responsive (≤768px) */
+@media only screen and (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 16px;
+  }
+
+  /* Navigation: show hamburger, stack menu when active */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul li a {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .hamburger {
+    display: block;
+    padding: 8px;
+  }
+
+  /* About hero */
+  .about_hero {
+    padding: 24px 12px;
+  }
+  .about_hero h2 {
+    font-size: 22px;
+  }
+  .about_hero p {
+    font-size: 14px;
+  }
+
+  /* About grid/cards */
+  .about {
+    padding: 28px 12px;
+  }
+  .about h2 {
+    font-size: 22px;
+  }
+  .about_card {
+    width: 95%;
+    padding: 18px;
+  }
+
+  /* Highlight */
+  .about_highlight h2 {
+    font-size: 20px;
+  }
+  .about_highlight p {
+    font-size: 14px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+/* Tablet Responsive (769px–1024px) */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  header h1 {
+    font-size: 32px;
+  }
+  header p {
+    font-size: 18px;
+  }
+  
+
+  .about_hero h2 {
+    font-size: 24px;
+  }
+  .about_hero p {
+    font-size: 15px;
+  }
+
+  .about h2 {
+    font-size: 24px;
+  }
+  .about_card {
+    width: 45%;   /* two cards per row on tablets */
+    padding: 22px;
+  }
+
+  .about_highlight h2 {
+    font-size: 22px;
+  }
+  .about_highlight p {
+    font-size: 15px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

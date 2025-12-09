@@ -1,0 +1,263 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin:0;
+    padding:0;
+    background-color: #2ecc71;
+}
+header{
+    background-color:#FF6B81;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    color: #1A1F36;
+}
+header p{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-style: italic;
+}
+nav{
+    display:flex;
+    position: sticky;
+    top:0;
+    justify-content: space-between;
+    background-color: #2ecc71;
+    padding: 0 20px;
+}
+.logo {
+   
+    position: right;
+    left: 10px;
+    display:flex;
+    top: 10px;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    display: block;
+   
+}
+ul {
+    
+  list-style-type: none;
+  margin: 0;
+  padding: 20;
+  overflow: hidden;
+  background-color: #2ecc71;
+  display: flex;
+  justify-content: flex-end;
+ 
+  
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: black;
+  padding: 14px 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #ff3b58;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+  
+}
+.hamburger img {
+    background-color: transparent;
+  width: 30px;
+  transition: transform 0.5s ease;
+}
+.hamburger:hover img {
+    transform: rotate(180deg);
+}
+.hamburger img.spin {
+  transform: rotate(720deg); /* spin once */
+}
+.characters{
+    background-color:#FFA3A8;
+    color:#1A1F36;
+    padding:50px 20px;
+    text-align: justify;
+
+}
+.char_info{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.characters h2{
+    font-size:30px;
+    margin-bottom:30px;
+}
+.character p{
+    margin-bottom: 0px;
+}
+
+.character-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.char-img {
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.char-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.char-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+footer {
+    background-color: #2ecc71;
+    color: #1A1F36;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 16px;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+    
+    /* Header adjustments */
+    header {
+        padding: 20px 10px;
+    }
+    header p {
+        font-size: 18px;
+    }
+
+    /* Navigation menu adjustments */
+    nav ul {
+        display: none;              /* hide menu on mobile */
+        flex-direction: column;     /* stack items vertically */
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul.active {
+        display: flex;              /* show menu when toggled */
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Character section layout fix */
+    .character-section {
+        flex-direction: column;     /* stack image above description */
+        align-items: center;        /* center content */
+        text-align: center;         /* optional: center text */
+    }
+
+    .char-img {
+        width: 100%;                /* full width on mobile */
+        max-width: 350px;           /* limit size so it doesn’t stretch too much */
+        height: 300px;               /* keep aspect ratio */
+        border-radius: 10px;
+    }
+
+    .char-info {
+        max-width: 90%;             /* keep text readable */
+        text-align: justify;
+    }
+}
+/* Tablet Responsive (769px–1024px) */
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+    
+    /* Header adjustments */
+    header {
+        padding: 15px 10px;
+        text-align: center;
+    }
+    header p {
+        font-size: 18px;
+    }
+
+    /* Navigation menu adjustments */
+    nav {
+        padding: 0 10px;
+    }
+    nav ul {
+        flex-direction: row;       /* keep horizontal menu */
+        justify-content: center;   /* center items */
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .hamburger {
+        display: none;             /* hide hamburger on tablets */
+    }
+
+    /* Character section layout */
+    .character-section {
+        flex-direction: row;       /* side-by-side layout */
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .char-img {
+        width: 300px;              /* smaller than desktop */
+        height: 200px;              /* keep aspect ratio */
+        border-radius: 12px;
+    }
+
+    .char-info {
+        max-width: 90%;            /* allow text to flow */
+    }
+    .char-info h2 {
+        font-size: 24px;
+    }
+    .char-info p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
