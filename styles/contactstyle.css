@@ -118,9 +118,6 @@ ul li a:hover {
 .contact-form button:hover {
   background-color: #27ae60;
 }
-.button{
-  text-decoration: none;
-}
 /* Footer */
 footer {
   background-color: #2ecc71;
@@ -143,7 +140,7 @@ footer {
 
   /* Navigation menu adjustments */
   nav ul {
-      display: none;              /* hide menu on mobile */
+      display: none;              /* Tago ang menu kung mobile para ang hamburger icon magwa */
       flex-direction: column;     /* stack items vertically */
       align-items: center;
       text-align: center;
@@ -252,4 +249,5 @@ footer {
       padding: 12px;
   }
 }
+
 
